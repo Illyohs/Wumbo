@@ -15,5 +15,5 @@ Add support for forge permissions(if that gets implemented) - M
 Add cross-server chat support - M
 Add cross-server teleportation support - M
 Add IRC support - L
-Ass XMPP support - L
+Add XMPP support - L
 Add some sort of aesthetic wizardry for people who donate or for patrons(if I ever get those -_-') - L
