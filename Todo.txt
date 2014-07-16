@@ -1,0 +1,19 @@
+This is a list of things that I hope will be implemented in to W.u.m.b.o
+||||||||||||||||||||||
+H = High priority    ||
+M = Medium priority  |||
+L = Low priority     ||
+||||||||||||||||||||||
+
+Guild storage - H
+Guild chest - H
+Guild chat - H
+Guild land( Making it so player who arn't in your can't enter/build areas that belong to that land) - H
+Alliances/Factions(With a leader) - H
+Currency system - M
+Add support for forge permissions(if that gets implemented) - M
+Add cross-server chat support - M
+Add cross-server teleportation support - M
+Add IRC support - L
+Ass XMPP support - L
+Add some sort of aesthetic wizardry for people who donate or for patrons(if I ever get those -_-') - L
