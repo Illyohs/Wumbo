@@ -22,20 +22,19 @@ public class ModBlocks {
 	public static Block guildChest;
 
 	public static void init() {
-		
+
 		guildCore = new BlockGuildCore();
 		guildChest = new BlockGuildChest();
-		
-		GameRegistry.registerBlock(guildCore, "guildCore");
-		GameRegistry.registerBlock(guildChest, "guildChest");
-		
+
+
 		gameReg();
 	}
 
 	private static void gameReg() {
-		System.out.print("foo");
-		
-		
+
+		GameRegistry.registerBlock(guildCore, "guildCore");
+		GameRegistry.registerBlock(guildChest, "guildChest");
+
 	}
 
 }

@@ -38,7 +38,7 @@ public class RenderGuildCore extends TileEntitySpecialRenderer{
 		TileGuildCore tgc = (TileGuildCore) tile;
 		
 		GL11.glPushMatrix();
-		GL11.glTranslated((float)x + 0.5, (float)y + 1.5, (float)z + 0.5);
+		GL11.glTranslated((float)x + 0.5, (float)y + 1.5, (float)z + 2.5);
         GL11.glScalef(1F, -1F, -1F);
         
         FMLClientHandler.instance().getClient().renderEngine.bindTexture(TEXTURE);

@@ -25,8 +25,10 @@ public class BlockGuildCore extends Block implements ITileEntityProvider {
 
 	public BlockGuildCore() {
 		super(Material.rock);
-		this.setCreativeTab(CreativeTabs.tabBrewing);
-		this.setBlockName("Bloop");
+		setBlockBounds(0.0F, 0.0F, 0.0F, 3.0F, 3.0F, 3.0F);
+//		setBlockBoundsForItemRender();
+		setCreativeTab(CreativeTabs.tabBrewing);
+		setBlockName("Bloop");
 		
 	}
 	

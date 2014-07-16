@@ -20,6 +20,11 @@ public class ModelGuildCore extends ModelBase {
 	
 	ModelRenderer Base;
 	
+	ModelRenderer Pillar;
+	
+	ModelRenderer Top;
+	
+	
 	public ModelGuildCore() {
 		
 		textureWidth = 128;
@@ -29,10 +34,16 @@ public class ModelGuildCore extends ModelBase {
 		Base.addBox(-8f, 0f, -8f, 48, 1, 48);
 		Base.setRotationPoint(0f, 23f, 0);
 		setRotation(Base, 0f, 0f, 0f);
+		
+		Top = new ModelRenderer(this, 0, 0);
+		Top.addBox(-8f, -47f, -8f, 48, 1, 48);
+		Top.setRotationPoint(0f, 23f, 0);
+		setRotation(Top, 0f, 0f, 0f);
 	}
 	
 	public void render(float f) {
 		Base.render(f);
+		Top.render(f);
 	}
 
 	private void setRotation(ModelRenderer model, float x, float y, float z) {
