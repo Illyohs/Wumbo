@@ -16,7 +16,7 @@ package us.illyohs.wumbo.common.lib;
 
 public class LibInfo {
 	
-	public static final String MOD_ID = "wunbo";
+	public static final String MOD_ID = "wumbo";
 	public static final String MOD_NAME = "W.u.m.b.o.";
 	public static final String MOD_VERSION = "@VERSION@";
 	

@@ -31,7 +31,7 @@ public class RenderGuildCore extends TileEntitySpecialRenderer{
 		model = new ModelGuildCore();
 	}
 	
-	private static final ResourceLocation TEXTURE = new ResourceLocation(LibInfo.MOD_ID, "textures/models/guildcore.png");
+	private static final ResourceLocation TEXTURE = new ResourceLocation(LibInfo.MOD_ID, "textures/models/woodslate.png");
 	
 	@Override
 	public void renderTileEntityAt(TileEntity tile, double x, double y, double z, float tick) {
