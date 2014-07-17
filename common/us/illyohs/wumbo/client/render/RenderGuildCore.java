@@ -19,16 +19,19 @@ import cpw.mods.fml.client.FMLClientHandler;
 import us.illyohs.wumbo.client.models.ModelGuildCore;
 import us.illyohs.wumbo.common.lib.LibInfo;
 import us.illyohs.wumbo.common.tile.TileGuildCore;
+import net.minecraft.client.model.ModelBat;
+import net.minecraft.client.model.ModelBiped;
+import net.minecraft.client.renderer.entity.RenderBiped;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
 
-public class RenderGuildCore extends TileEntitySpecialRenderer{
+public class RenderGuildCore extends TileEntitySpecialRenderer {
 
-	private ModelGuildCore model;
+	private ModelGuildCore frame;
 	
 	public RenderGuildCore() {
-		model = new ModelGuildCore();
+		frame = new ModelGuildCore();
 	}
 	
 	private static final ResourceLocation TEXTURE = new ResourceLocation(LibInfo.MOD_ID, "textures/models/woodslate.png");
@@ -42,13 +45,15 @@ public class RenderGuildCore extends TileEntitySpecialRenderer{
         GL11.glScalef(1F, -1F, -1F);
         
         FMLClientHandler.instance().getClient().renderEngine.bindTexture(TEXTURE);
-        model.render(.0625F);
+        frame.render(.0625F);
         GL11.glScalef(1F, -1F, -1F);
         GL11.glBlendFunc(0, 1);
         GL11.glClearColor(0.7f, 0.7f, 0.7f, 1.0f);
         
         GL11.glPopMatrix();
-		
+        
 	}
+	
+	
 
 }

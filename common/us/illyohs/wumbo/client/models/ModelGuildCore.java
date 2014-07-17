@@ -13,11 +13,17 @@
  */
 package us.illyohs.wumbo.client.models;
 
+import org.lwjgl.opengl.GL11;
+
+import cpw.mods.fml.client.FMLClientHandler;
 import net.minecraft.client.model.ModelBase;
+import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.model.ModelRenderer;
+import net.minecraft.util.ResourceLocation;
 
 public class ModelGuildCore extends ModelBase {
 	
+	//Base
 	ModelRenderer Base;
 	
 	//Pillar group 1
@@ -40,14 +46,15 @@ public class ModelGuildCore extends ModelBase {
 	ModelRenderer Pillar11;
 	ModelRenderer Pillar12;
 	
+	//Top
 	ModelRenderer Top;
-	
 	
 	public ModelGuildCore() {
 		
 		textureWidth = 128;
 		textureHeight = 128;
 		
+		//Top
 		Base = new ModelRenderer(this, 0, 0);
 		Base.addBox(-8f, 0f, -8f, 48, 1, 48);
 		Base.setRotationPoint(0f, 23f, 0);
@@ -117,6 +124,7 @@ public class ModelGuildCore extends ModelBase {
 		Pillar12.setRotationPoint(0f, 23f, 0);
 		setRotation(Pillar12, 0f, 0f, 0f);
 		
+		//Base
 		Top = new ModelRenderer(this, 0, 0);
 		Top.addBox(-8f, -47f, -8f, 48, 1, 48);
 		Top.setRotationPoint(0f, 23f, 0);
