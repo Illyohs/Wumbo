@@ -15,6 +15,8 @@ package us.illyohs.wumbo.common.lib;
 
 public interface IProxy {
 	
+	public abstract void renderKeyBinding();
+	
 	public abstract void renderModels();
 	
 	public abstract void registerTileEntitys();

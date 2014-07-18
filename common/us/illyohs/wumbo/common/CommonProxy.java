@@ -27,4 +27,7 @@ public class CommonProxy implements IProxy{
 		GameRegistry.registerTileEntity(TileGuildCore.class, "tileguildcore");
 	}
 
+	@Override
+	public void renderKeyBinding() {}
+
 }

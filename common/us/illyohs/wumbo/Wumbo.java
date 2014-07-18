@@ -17,6 +17,7 @@ import us.illyohs.wumbo.common.block.ModBlocks;
 import us.illyohs.wumbo.common.item.ModItems;
 import us.illyohs.wumbo.common.lib.IProxy;
 import us.illyohs.wumbo.common.lib.LibInfo;
+import us.illyohs.wumbo.common.network.PacketHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -24,6 +25,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.network.NetworkRegistry;
 
 @Mod(modid =LibInfo.MOD_ID, name = LibInfo.MOD_NAME, version = LibInfo.MOD_VERSION)
 public class Wumbo {
@@ -36,6 +38,9 @@ public class Wumbo {
 	
 	@EventHandler
 	public static void preinit(FMLPreInitializationEvent event) {
+		
+		PacketHandler.init();
+		
 		ModBlocks.init();
 		ModItems.init();
 	}
@@ -45,6 +50,8 @@ public class Wumbo {
 		
 		proxy.registerTileEntitys();
 		proxy.renderModels();
+		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
+		proxy.renderKeyBinding();
 		
 	}
 	

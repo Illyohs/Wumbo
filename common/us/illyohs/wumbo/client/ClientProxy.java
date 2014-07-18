@@ -13,12 +13,14 @@
  */
 package us.illyohs.wumbo.client;
 
-import cpw.mods.fml.client.registry.ClientRegistry;
 import us.illyohs.wumbo.client.render.RenderGuildCore;
+import us.illyohs.wumbo.common.core.handler.KeyHandler;
 import us.illyohs.wumbo.common.lib.IProxy;
 import us.illyohs.wumbo.common.tile.TileGuildCore;
+import cpw.mods.fml.client.registry.ClientRegistry;
+import cpw.mods.fml.common.FMLCommonHandler;
 
-public class ClientProxy implements IProxy{
+public class ClientProxy implements IProxy {
 
 	@Override
 	public void renderModels() {
@@ -28,5 +30,11 @@ public class ClientProxy implements IProxy{
 
 	@Override
 	public void registerTileEntitys() {} //NO-OP
+
+	@Override
+	public void renderKeyBinding() {
+		KeyHandler keyhandler = new KeyHandler();
+		FMLCommonHandler.instance().bus().register(keyhandler);
+	}
 
 }
