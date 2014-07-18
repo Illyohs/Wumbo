@@ -16,6 +16,7 @@ package us.illyohs.wumbo.client.render;
 import org.lwjgl.opengl.GL11;
 
 import cpw.mods.fml.client.FMLClientHandler;
+import us.illyohs.wumbo.client.models.ModelCoreOfFriendship;
 import us.illyohs.wumbo.client.models.ModelGuildCore;
 import us.illyohs.wumbo.common.lib.LibInfo;
 import us.illyohs.wumbo.common.tile.TileGuildCore;
@@ -29,9 +30,11 @@ import net.minecraft.util.ResourceLocation;
 public class RenderGuildCore extends TileEntitySpecialRenderer {
 
 	private ModelGuildCore frame;
+	private ModelCoreOfFriendship core;
 	
 	public RenderGuildCore() {
 		frame = new ModelGuildCore();
+		core = new ModelCoreOfFriendship();
 	}
 	
 	private static final ResourceLocation TEXTURE = new ResourceLocation(LibInfo.MOD_ID, "textures/models/woodslate.png");
@@ -46,6 +49,7 @@ public class RenderGuildCore extends TileEntitySpecialRenderer {
         
         FMLClientHandler.instance().getClient().renderEngine.bindTexture(TEXTURE);
         frame.render(.0625F);
+        core.render();
         GL11.glScalef(1F, -1F, -1F);
         GL11.glBlendFunc(0, 1);
         GL11.glClearColor(0.7f, 0.7f, 0.7f, 1.0f);
