@@ -13,15 +13,23 @@
  */
 package us.illyohs.wumbo.common.block;
 
-import net.minecraft.block.Block;
+import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.world.World;
+import us.illyohs.wumbo.common.tile.TileGuildChest;
 
-public class BlockGuildChest extends Block {
+public class BlockGuildChest extends BlockContainer {
 
 	public BlockGuildChest() {
 		super(Material.rock);
 		this.setCreativeTab(CreativeTabs.tabBrewing);
+	}
+
+	@Override
+	public TileEntity createNewTileEntity(World world, int meta) {
+		return new TileGuildChest();
 	}
 
 }

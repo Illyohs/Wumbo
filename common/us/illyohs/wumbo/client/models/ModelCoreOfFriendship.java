@@ -15,7 +15,7 @@ package us.illyohs.wumbo.client.models;
 
 import net.minecraftforge.client.model.AdvancedModelLoader;
 import net.minecraftforge.client.model.IModelCustom;
-import us.illyohs.wumbo.common.lib.LibModels;
+import us.illyohs.wumbo.common.lib.LibAssets;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -25,11 +25,54 @@ public class ModelCoreOfFriendship {
 	private IModelCustom modelOfFriendship;
 	
 	public ModelCoreOfFriendship() {
-		modelOfFriendship = AdvancedModelLoader.loadModel(LibModels.COREOFFRIENDSHIP);
+		modelOfFriendship = AdvancedModelLoader.loadModel(LibAssets.OBJ_GUILD_CORE);
 	}
 	
-	public void render(){
+	public void render() {
 		modelOfFriendship.renderAll();
+
+		
 		
 	}
+	
+	public void renderAll() {
+		modelOfFriendship.renderAll();
+	}
+	
+	public void render1() {
+		modelOfFriendship.renderOnly("cube1");
+	}
+
+	public void render2() {
+		modelOfFriendship.renderOnly("cube1", "cube6");
+	}
+
+	public void render3() {
+		modelOfFriendship.renderOnly("cube1", "cube3", "cube6");
+	}
+	
+	public void render4() {
+		modelOfFriendship.renderOnly("cube1", "cube3", "cube6", "cube8");
+	}
+
+	public void render5() {
+		modelOfFriendship.renderOnly("cube1", "cube3", "cube5",
+				"cube6", "cube8");
+	}
+	
+	public void render6() {
+		modelOfFriendship.renderOnly("cube1", "cube2", "cube3",
+				"cube5", "cube6", "cube8");
+	}
+	
+	public void render7() {
+		modelOfFriendship.renderOnly("cube1", "cube2", "cube3",
+				"cube5", "cube6", "cube7", "cube8");
+	}
+	
+	public void render8() {
+		modelOfFriendship.renderOnly("cube1", "cube2", "cube3",
+				"cube4", "cube5", "cube6", "cube7", "cube8");
+	}
+	
 }

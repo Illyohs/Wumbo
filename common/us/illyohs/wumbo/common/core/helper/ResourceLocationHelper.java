@@ -13,17 +13,25 @@
  */
 package us.illyohs.wumbo.common.core.helper;
 
-import us.illyohs.wumbo.common.lib.LibInfo;
 import net.minecraft.util.ResourceLocation;
+import us.illyohs.wumbo.common.lib.LibInfo;
 
 public class ResourceLocationHelper {
 	
 	public static ResourceLocation getResourceLocation(String modid, String path) {
 		return new ResourceLocation(modid, path);
 	}
-
-	public static ResourceLocation getResourceLocation(String path) {
-		return getResourceLocation(LibInfo.MOD_ID.toLowerCase(),  path);
+	
+	public static ResourceLocation getOBJAsset(String path) {
+		return getResourceLocation(LibInfo.MOD_ID.toLowerCase(), "models/" + path + ".obj");
+	}
+	
+	public static ResourceLocation getGUIAsset(String path) {
+		return getResourceLocation(LibInfo.MOD_ID.toLowerCase(), "textures/gui/" + path + ".png");
+	}
+	
+	public static ResourceLocation getModelAsset(String path) {
+		return getResourceLocation(LibInfo.MOD_ID.toLowerCase(), "textures/models/" + path + ".png");
 	}
 
 }

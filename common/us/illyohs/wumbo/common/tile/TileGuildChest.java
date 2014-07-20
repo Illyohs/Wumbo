@@ -8,18 +8,13 @@
  * (http://creativecommons.org/licenses/by-nc-sa/4.0/)
  *
  * 
- * Class created on Jul 15, 2014 at 7:54:52 PM
+ * Class created on Jul 18, 2014 at 10:17:53 PM
  * 
  */
 package us.illyohs.wumbo.common.tile;
 
 import net.minecraft.tileentity.TileEntity;
 
-public class TileGuildCore extends TileEntity {
-	
-//	int Guild 
+public class TileGuildChest extends TileEntity {
 
-	public TileGuildCore() {
-		// TODO Auto-generated constructor stub
-	}
 }

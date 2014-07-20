@@ -13,19 +13,16 @@
  */
 package us.illyohs.wumbo.client.render;
 
-import org.lwjgl.opengl.GL11;
-
-import cpw.mods.fml.client.FMLClientHandler;
-import us.illyohs.wumbo.client.models.ModelCoreOfFriendship;
-import us.illyohs.wumbo.client.models.ModelGuildCore;
-import us.illyohs.wumbo.common.lib.LibInfo;
-import us.illyohs.wumbo.common.tile.TileGuildCore;
-import net.minecraft.client.model.ModelBat;
-import net.minecraft.client.model.ModelBiped;
-import net.minecraft.client.renderer.entity.RenderBiped;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.ResourceLocation;
+
+import org.lwjgl.opengl.GL11;
+
+import us.illyohs.wumbo.client.models.ModelCoreOfFriendship;
+import us.illyohs.wumbo.client.models.ModelGuildCore;
+import us.illyohs.wumbo.common.lib.LibAssets;
+import us.illyohs.wumbo.common.tile.TileGuildCore;
+import cpw.mods.fml.client.FMLClientHandler;
 
 public class RenderGuildCore extends TileEntitySpecialRenderer {
 
@@ -37,7 +34,7 @@ public class RenderGuildCore extends TileEntitySpecialRenderer {
 		core = new ModelCoreOfFriendship();
 	}
 	
-	private static final ResourceLocation TEXTURE = new ResourceLocation(LibInfo.MOD_ID, "textures/models/woodslate.png");
+//	private static final ResourceLocation TEXTURE = new ResourceLocation(LibInfo.MOD_ID, "textures/models/woodslate.png");
 	
 	@Override
 	public void renderTileEntityAt(TileEntity tile, double x, double y, double z, float tick) {
@@ -47,12 +44,20 @@ public class RenderGuildCore extends TileEntitySpecialRenderer {
 		GL11.glTranslated((float)x + 0.5, (float)y + 1.5, (float)z + 2.5);
         GL11.glScalef(1F, -1F, -1F);
         
-        FMLClientHandler.instance().getClient().renderEngine.bindTexture(TEXTURE);
+        FMLClientHandler.instance().getClient().renderEngine.bindTexture(LibAssets.ASSET_GUILD_CORE_FRAME);
         frame.render(.0625F);
-        core.render();
-        GL11.glScalef(1F, -1F, -1F);
+//        core.render();
+//        GL11.glScalef(1F, -1F, -1F);
         GL11.glBlendFunc(0, 1);
         GL11.glClearColor(0.7f, 0.7f, 0.7f, 1.0f);
+        
+        GL11.glPopMatrix();
+        
+        GL11.glPushMatrix();
+        GL11.glTranslated((float)x + 1.0, (float)y + 2.0  , (float)z + 1.0);
+        GL11.glScalef(1F, -1F, -1F);
+        
+        core.render8();
         
         GL11.glPopMatrix();
         

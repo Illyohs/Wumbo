@@ -11,12 +11,12 @@
  * Class created on Jul 18, 2014 at 12:55:51 AM
  * 
  */
-package us.illyohs.wumbo;
+package us.illyohs.wumbo.client.core.handler;
 
-import us.illyohs.wumbo.client.gui.GuiId;
-import us.illyohs.wumbo.client.gui.GuiWumboChat;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
+import us.illyohs.wumbo.client.gui.GuiId;
+import us.illyohs.wumbo.client.gui.GuiWumboChat;
 import cpw.mods.fml.common.network.IGuiHandler;
 
 public class GuiHandler implements IGuiHandler {

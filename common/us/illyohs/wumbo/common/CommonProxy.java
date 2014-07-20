@@ -13,9 +13,9 @@
  */
 package us.illyohs.wumbo.common;
 
-import cpw.mods.fml.common.registry.GameRegistry;
 import us.illyohs.wumbo.common.lib.IProxy;
 import us.illyohs.wumbo.common.tile.TileGuildCore;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 public class CommonProxy implements IProxy{
 

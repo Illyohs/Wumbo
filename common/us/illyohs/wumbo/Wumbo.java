@@ -13,6 +13,7 @@
  */
 package us.illyohs.wumbo;
 
+import us.illyohs.wumbo.client.core.handler.GuiHandler;
 import us.illyohs.wumbo.common.block.ModBlocks;
 import us.illyohs.wumbo.common.item.ModItems;
 import us.illyohs.wumbo.common.lib.IProxy;

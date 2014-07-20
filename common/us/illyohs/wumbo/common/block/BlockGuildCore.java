@@ -13,15 +13,15 @@
  */
 package us.illyohs.wumbo.common.block;
 
-import us.illyohs.wumbo.common.tile.TileGuildCore;
-import net.minecraft.block.Block;
-import net.minecraft.block.ITileEntityProvider;
+import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
-public class BlockGuildCore extends Block implements ITileEntityProvider {
+import us.illyohs.wumbo.common.tile.TileGuildCore;
+
+public class BlockGuildCore extends BlockContainer {
 
 	public BlockGuildCore() {
 		super(Material.rock);
@@ -48,9 +48,9 @@ public class BlockGuildCore extends Block implements ITileEntityProvider {
         return -1;
     }
 
-	@Override
-	public TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_) {
-		return new TileGuildCore();
-	}
+    @Override
+    public TileEntity createNewTileEntity(World world, int meta) {
+    	return new TileGuildCore();
+    }
 
 }

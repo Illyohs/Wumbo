@@ -13,13 +13,8 @@
  */
 package us.illyohs.wumbo.client.models;
 
-import org.lwjgl.opengl.GL11;
-
-import cpw.mods.fml.client.FMLClientHandler;
 import net.minecraft.client.model.ModelBase;
-import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.model.ModelRenderer;
-import net.minecraft.util.ResourceLocation;
 
 public class ModelGuildCore extends ModelBase {
 	
